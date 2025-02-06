@@ -5,7 +5,7 @@ def upsert_directory(path):
     if not os.path.exists(full_path):
         os.makedirs(full_path)
 
-initIgnore = ["sdk", "index.py"]
+initIgnore = ["sdk", "index.py", ".git", ".gitignore", "README.md"]
 
 def threeDigitIndex(input: str, index: int):
     return f"{str(index+1).zfill(3)} - {input}"
