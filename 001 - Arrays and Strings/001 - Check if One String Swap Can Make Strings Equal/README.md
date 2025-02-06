@@ -10,45 +10,21 @@ You are given two strings s1 and s2 of equal length. A string swap is an operati
 
 **Example 1:**
 
-**Input**:
+**Input**: ```s1 = "bank", s2 = "kanb"```
 
-```python
-s1 = "bank", s2 = "kanb"
-```
-
-**Output**:
-
-```python
-True
-```
+**Output**: ```True```
 
 **Example 2:**
 
-**Input**:
+**Input**: ```s1 = "attack", s2 = "defend"```
 
-```python
-s1 = "attack", s2 = "defend"
-```
-
-**Output**:
-
-```python
-False
-```
+**Output**: ```False```
 
 **Example 3:**
 
-**Input**:
+**Input**: ```s1 = "kelb", s2 = "kelb"```
 
-```python
-s1 = "kelb", s2 = "kelb"
-```
-
-**Output**:
-
-```python
-True
-```
+**Output**: ```True```
 
 ### Constraints
 

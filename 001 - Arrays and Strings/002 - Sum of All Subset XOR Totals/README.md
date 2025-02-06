@@ -1,6 +1,6 @@
 ## Sum of All Subset XOR Totals
 
-**Difficulty**: `Medium` - **Tags**: `Arrays`, `Math`, `Backtracking`, `Combinatorics`
+**Difficulty**: `Easy` - **Tags**: `Arrays`, `Math`, `Backtracking`, `Combinatorics`
 
 ### Description
 
@@ -10,45 +10,21 @@ The XOR total of an array is defined as the bitwise XOR of all its elements, or 
 
 **Example 1:**
 
-**Input**:
+**Input**: ```nums = [1,3]```
 
-```python
-nums = [1,3]
-```
-
-**Output**:
-
-```python
-6
-```
+**Output**: ```6```
 
 **Example 2:**
 
-**Input**:
+**Input**: ```nums = [5,1,6]```
 
-```python
-nums = [5,1,6]
-```
-
-**Output**:
-
-```python
-28
-```
+**Output**: ```28```
 
 **Example 3:**
 
-**Input**:
+**Input**: ```nums = [3,4,5,6,7,8]```
 
-```python
-nums = [3,4,5,6,7,8]
-```
-
-**Output**:
-
-```python
-480
-```
+**Output**: ```480```
 
 ### Constraints
 

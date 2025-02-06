@@ -19,8 +19,8 @@ def buildProblemReadme(problem: Problem):
 
     for i, example in enumerate(problem.examples):
         res += f"**Example {i+1}:**\n\n"
-        res += f"**Input**:\n\n```python\n{example.input}\n```\n\n"
-        res += f"**Output**:\n\n```python\n{example.output}\n```\n\n"
+        res += f"**Input**: ```{example.input}```\n\n"
+        res += f"**Output**: ```{example.output}```\n\n"
     
     res += "### Constraints\n\n"
     
