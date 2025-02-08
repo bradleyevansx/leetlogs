@@ -239,7 +239,7 @@ topics: List[Topic] = [
             if target - nums[i] in seen:
                 return [seen[target-nums[i]], i]
             seen[nums[i]] = i''',
-            "This problem is possible using brute force by checking every possible combination of indicies in the array for the target. But using the seen hash map allows us to maintain a set of numbers we have already seen. If we have seen the number we need, in combination with the current number, to reach the target then we are able to look up the number we need's index in the seen hashmap and return the solution.",
+            "This problem is possible using brute force by checking every possible combination of indices in the array for the target. But using the seen hash map allows us to maintain a set of numbers we have already seen. If we have seen the number we need, in combination with the current number, to reach the target then we are able to look up the number we need's index in the seen hashmap and return the solution.",
             "O(n)",
             "O(n)"
                 )
@@ -296,7 +296,7 @@ Implement the NumberContainers class:
         if number not in self.numbersToIndex:
             return -1
         return  self.numbersToIndex[number][0]''',
-        "This solution is the typical double hash map solution to speed up querying. The only trick to this question is storing the indicies of the numbers in sorted order somehow. Leetcode suggests and ordered set, but I couldn't see one easily accessible in python so I used a min heap. The only slow part to this algorithm would be re-heapifying the indicies after removing one from the list. That is O(logn)",
+        "This solution is the typical double hash map solution to speed up querying. The only trick to this question is storing the indices of the numbers in sorted order somehow. Leetcode suggests and ordered set, but I couldn't see one easily accessible in python so I used a min heap. The only slow part to this algorithm would be re-heapifying the indices after removing one from the list. That is O(logn)",
         "O(logn)",
         "O(n)"
                 )
