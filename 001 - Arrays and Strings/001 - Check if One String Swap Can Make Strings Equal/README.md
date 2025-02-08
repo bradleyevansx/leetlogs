@@ -42,6 +42,8 @@ The solution is to check if the two strings are equal. If they are, return True.
 
 **Time Complexity**: O(n) - **Space Complexity**: O(n) 
 
+**The Code:**
+
 ```python
 class Solution:
     def areAlmostEqual(self, s1: str, s2: str) -> bool:

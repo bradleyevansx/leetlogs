@@ -36,6 +36,8 @@ The core of this solution is the math involved with determining how many pairs y
 
 **Time Complexity**: O(n^2) - **Space Complexity**: O(n^2) 
 
+**The Code:**
+
 ```python
 class Solution:
     def tupleSameProduct(self, nums: List[int]) -> int:

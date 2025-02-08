@@ -31,6 +31,8 @@ def buildProblemReadme(problem: Problem):
     res += "### Solution\n\n"
     res += f"**Description**:\n\n{problem.solution.description}\n\n"
     res += f"**Time Complexity**: {problem.solution.timeComplexity} - **Space Complexity**: {problem.solution.spaceComplexity} \n\n"
+    
+    res += "**The Code:**\n\n"
    
     res += f"```python\n{problem.solution.code}\n```"
 

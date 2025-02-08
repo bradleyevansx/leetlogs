@@ -38,6 +38,8 @@ This problem is Easy but has an optimization that can make all the difference in
 
 **Time Complexity**: O(n) - **Space Complexity**: O(1) 
 
+**The Code:**
+
 ```python
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:

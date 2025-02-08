@@ -40,6 +40,8 @@ This solution is actually very simple. The description tells us after each query
 
 **Time Complexity**: O(n) - **Space Complexity**: O(n) 
 
+**The Code:**
+
 ```python
 class Solution:
     def queryResults(self, limit: int, queries: List[List[int]]) -> List[int]:
