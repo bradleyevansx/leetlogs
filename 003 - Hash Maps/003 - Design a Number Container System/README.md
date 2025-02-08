@@ -67,7 +67,7 @@ class NumberContainers:
 
 **Description**:
 
-This solution is the typical double hash map solution to speed up querying. The only trick to this question is storing the indicies of the numbers in sorted order somehow. Leetcode suggests and ordered set, but I couldn't see one easily accessible in python so I used a min heap. The only slow part to this algorithm would be re-heapifying the indicies after removing one from the list. That is O(logn)
+This solution is the typical double hash map solution to speed up querying. The only trick to this question is storing the indices of the numbers in sorted order somehow. Leetcode suggests and ordered set, but I couldn't see one easily accessible in python so I used a min heap. The only slow part to this algorithm would be re-heapifying the indices after removing one from the list. That is O(logn)
 
 **Time Complexity**: O(logn) - **Space Complexity**: O(n) 
 

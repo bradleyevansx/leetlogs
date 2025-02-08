@@ -51,7 +51,7 @@ class Solution:
 
 **Description**:
 
-This problem is possible using brute force by checking every possible combination of indicies in the array for the target. But using the seen hash map allows us to maintain a set of numbers we have already seen. If we have seen the number we need, in combination with the current number, to reach the target then we are able to look up the number we need's index in the seen hashmap and return the solution.
+This problem is possible using brute force by checking every possible combination of indices in the array for the target. But using the seen hash map allows us to maintain a set of numbers we have already seen. If we have seen the number we need, in combination with the current number, to reach the target then we are able to look up the number we need's index in the seen hashmap and return the solution.
 
 **Time Complexity**: O(n) - **Space Complexity**: O(n) 
 
