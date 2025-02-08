@@ -36,6 +36,12 @@ You are given two strings s1 and s2 of equal length. A string swap is an operati
 
 ### Solution
 
+**Description**:
+
+The solution is to check if the two strings are equal. If they are, return True. Otherwise, find the indexes of the characters that are different and store them in a list. If the length of the list is not 2, return False. Otherwise, check if the characters at the indexes in the list are equal. If they are, return True. Otherwise, return False.
+
+**Time Complexity**: O(n) - **Space Complexity**: O(n) 
+
 ```python
 class Solution:
     def areAlmostEqual(self, s1: str, s2: str) -> bool:
@@ -53,10 +59,3 @@ class Solution:
                 return True
         return False
 ```
-
-**Description**:
-
-The solution is to check if the two strings are equal. If they are, return True. Otherwise, find the indexes of the characters that are different and store them in a list. If the length of the list is not 2, return False. Otherwise, check if the characters at the indexes in the list are equal. If they are, return True. Otherwise, return False.
-
-**Time Complexity**: O(n) - **Space Complexity**: O(n) 
-

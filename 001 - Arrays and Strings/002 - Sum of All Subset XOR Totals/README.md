@@ -34,6 +34,12 @@ The XOR total of an array is defined as the bitwise XOR of all its elements, or 
 
 ### Solution
 
+**Description**:
+
+The heart of this problem really lies in the backtracking part where you generate all the subset combinations for the array. I do this recursively. In this case the decision at each node of the decision tree is to add the current index or to not add it. Add the leafs of the tree you have all the different subsets. Then from there you can just iterate over the subsets and get the XOR of all the elements in each subset and add it to the response. This solution will be beat out by all the people who use the solution where you use the sum and length of the array to do fancy math and get the answer without any manipulation of the data structure.
+
+**Time Complexity**: O(2^n * n) - **Space Complexity**: O(2^n * n) 
+
 ```python
 class Solution:
     def subsetXORSum(self, nums: List[int]) -> int:
@@ -62,10 +68,3 @@ class Solution:
 
         return res
 ```
-
-**Description**:
-
-The heart of this problem really lies in the backtracking part where you generate all the subset combinations for the array. I do this recursively. In this case the decision at each node of the decision tree is to add the current index or to not add it. Add the leafs of the tree you have all the different subsets. Then from there you can just iterate over the subsets and get the XOR of all the elements in each subset and add it to the response. This solution will be beat out by all the people who use the solution where you use the sum and length of the array to do fancy math and get the answer without any manipulation of the data structure.
-
-**Time Complexity**: O(2^n * n) - **Space Complexity**: O(2^n * n) 
-

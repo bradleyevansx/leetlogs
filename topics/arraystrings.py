@@ -151,6 +151,6 @@ arraystrings =     Topic(
         "O(n^2)",
         "O(n^2)"
                 )
-            )
-        ]
+            ),
+                    ]
     )

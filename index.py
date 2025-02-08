@@ -6,10 +6,11 @@ from sdk.utils.filecrud import init
 from sdk.utils.topics import handleTopic
 from topics.arraystrings import arraystrings
 from topics.hashmaps import hashmaps
+from topics.twopointers import twopointers
 
 topics: List[Topic] = [
     arraystrings,
-    Topic("Two Pointers"),
+    twopointers,
 hashmaps,
     Topic("Sliding Windows"),
     Topic("Stacks"),

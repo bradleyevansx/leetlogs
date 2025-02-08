@@ -34,6 +34,12 @@ You are given an integer `limit` and a 2D array `queries`. limit is the number o
 
 ### Solution
 
+**Description**:
+
+This solution is actually very simple. The description tells us after each query we need to know the total amount of distinct colors among the ball set. Intuition tells us to get the amount of colors we need the balls grouped by color. That means a hashmap. This hashmap would go 'color' -> '[ball1, ball2]'. The problem we now face is knowing which color key in the hashmap to remove the ball from if the color of the ball is reassigned. To do this we will keep track of the colors of the balls in a separate hashmap. This hashmap will look like 'ball' -> 'color'. So now on each iteration through the queries we: 1. check if the balls color is being reassigned 2. if it is then we remove is from the array at the end of the balls old color 3. if the array at the end of the old color is empty remove it from the hashmap 4. set the balls color to the new color 5. put the ball in the color it belongs to in the color hashmap 6. append the length of the color hashmap to the response 7. return response. The trade off of creating the second hashmap is well worth the time speed up. This setup reminds me of a database setup where the ball would be the entity and the color to balls hash map is a sort of cash for some critical values you frequently need. So the hashmaps are just a representation of that sort of situation.
+
+**Time Complexity**: O(n) - **Space Complexity**: O(n) 
+
 ```python
 class Solution:
     def queryResults(self, limit: int, queries: List[List[int]]) -> List[int]:
@@ -56,10 +62,3 @@ class Solution:
         
         return res
 ```
-
-**Description**:
-
-This solution is actually very simple. The description tells us after each query we need to know the total amount of distinct colors among the ball set. Intuition tells us to get the amount of colors we need the balls grouped by color. That means a hashmap. This hashmap would go 'color' -> '[ball1, ball2]'. The problem we now face is knowing which color key in the hashmap to remove the ball from if the color of the ball is reassigned. To do this we will keep track of the colors of the balls in a separate hashmap. This hashmap will look like 'ball' -> 'color'. So now on each iteration through the queries we: 1. check if the balls color is being reassigned 2. if it is then we remove is from the array at the end of the balls old color 3. if the array at the end of the old color is empty remove it from the hashmap 4. set the balls color to the new color 5. put the ball in the color it belongs to in the color hashmap 6. append the length of the color hashmap to the response 7. return response. The trade off of creating the second hashmap is well worth the time speed up. This setup reminds me of a database setup where the ball would be the entity and the color to balls hash map is a sort of cash for some critical values you frequently need. So the hashmaps are just a representation of that sort of situation.
-
-**Time Complexity**: O(n) - **Space Complexity**: O(n) 
-
