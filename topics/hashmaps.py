@@ -143,6 +143,30 @@ Implement the NumberContainers class:
         "O(logn)",
         "O(n)"
                 )
+            ),
+            Problem(
+                "217",
+                "Contains Duplicate",
+                '''Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.''',
+                "https://leetcode.com/problems/contains-duplicate/",
+                "Easy",
+                ["Hash Set", "Arrays"],
+                [Example("nums = [1,2,3,1]", "True"), Example("nums = [1,2,3,4]", "False"), Example("nums = [1,1,1,3,3,4,3,2,4,2]", "True")],
+                [Constraint("1 <= nums.length <= 10^5"), Constraint("-10^9 <= nums[i] <= 10^9")],
+                Solution(
+                    '''class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        seen = set()
+
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
+        return False''',
+        "This problem is the simplest example of using the power of hash sets to your advantage. The brute force to this problem would be O(n^2). By using a hash set, and taking advantage of the constant lookup time, we bring the overall time complexit to O(n). This is a great improvement.",
+        "O(n)",
+        "O(n)"
+                )
             )
         ],
         )

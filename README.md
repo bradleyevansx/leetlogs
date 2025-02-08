@@ -38,6 +38,7 @@ My goal in completing this set of questions is to force myself to finish a set o
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
 | [Two Sum](https://leetcode.com/problems/two-sum/)                                                     | <img src="https://img.shields.io/badge/-Easy-green" /> | `Array`, `Hash Table`                            | [✅](./003%20-%20Hash%20Maps/002%20-%20Two%20Sum/README.md)                                          |
 | [Best Time to Buy and Sell a Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-a-stock/) | <img src="https://img.shields.io/badge/-Easy-green" /> | `Array`, `Dynamic Programming`, `Sliding Window` | [✅](./002%20-%20Two%20Pointers/001%20-%20Best%20Time%20to%20Buy%20and%20Sell%20a%20Stock/README.md) |
+| [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                               | <img src="https://img.shields.io/badge/-Easy-green" /> | `Array`, `Dynamic Programming`, `Sliding Window` | [✅](./003%20-%20Hash%20Maps/004%20-%20Contains%20Duplicate/README.md)                               |
 
 ## Repository Structure
 
