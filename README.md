@@ -34,9 +34,9 @@ My goal in completing this set of questions is to force myself to finish a set o
 
 [Curated List of Top 75 LeetCode Questions](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
 
-| Problem                                           | Difficulty                                             | Tags                  | LeetCode                                                                                                                     |
-| ------------------------------------------------- | ------------------------------------------------------ | --------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| [Two Sum](https://leetcode.com/problems/two-sum/) | <img src="https://img.shields.io/badge/-Easy-green" /> | `Array`, `Hash Table` | [✅](./001%20-%20Arrays%20and%20Strings/001%20-%20Check%20if%20One%20String%20Swap%20Can%20Make%20Strings%20Equal/README.md) |
+| Problem                                           | Difficulty                                             | Tags                  | LeetCode                                                    |
+| ------------------------------------------------- | ------------------------------------------------------ | --------------------- | ----------------------------------------------------------- |
+| [Two Sum](https://leetcode.com/problems/two-sum/) | <img src="https://img.shields.io/badge/-Easy-green" /> | `Array`, `Hash Table` | [✅](./003%20-%20Hash%20Maps/002%20-%20Two%20Sum/README.md) |
 
 ## Repository Structure
 

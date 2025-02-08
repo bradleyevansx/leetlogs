@@ -211,8 +211,97 @@ topics: List[Topic] = [
                 "O(n)",
                 "O(n)"
                 )
+            ),
+            Problem(
+                "1",
+                "Two Sum",
+                "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. There is exactly one solution per input.",
+                "https://leetcode.com/problems/two-sum/",
+                "Easy",
+                ["Arrays", "Hash Maps"],
+                [
+                    Example("nums = [2,7,11,15], target = 9","[0,1]"),
+                    Example("nums = [3,2,4], target = 6","[1,2]"),
+                    Example("nums = [3,3], target = 6", "[0,1]")
+                ],
+                [
+                    Constraint("2 <= nums.length <= 10^4"),
+                    Constraint("-10^9 <= nums[i] <= 10^9"),
+                    Constraint("-10^9 <= target <= 10^9"),
+                    Constraint("Exactly one solution exists"),
+                ],
+                Solution(
+                    '''class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = {}
+
+        for i in range(len(nums)):
+            if target - nums[i] in seen:
+                return [seen[target-nums[i]], i]
+            seen[nums[i]] = i''',
+            "This problem is possible using brute force by checking every possible combination of indicies in the array for the target. But using the seen hash map allows us to maintain a set of numbers we have already seen. If we have seen the number we need, in combination with the current number, to reach the target then we are able to look up the number we need's index in the seen hashmap and return the solution.",
+            "O(n)",
+            "O(n)"
+                )
+            ),
+            Problem(
+                "2349",
+                "Design a Number Container System",
+                '''Design a number container system that can do the following:
+
+    Insert or Replace a number at the given index in the system.
+    Return the smallest index for the given number in the system.
+
+Implement the NumberContainers class:
+
+    NumberContainers() Initializes the number container system.
+    void change(int index, int number) Fills the container at index with the number. If there is already a number at that index, replace it.
+    int find(int number) Returns the smallest index for the given number, or -1 if there is no index that is filled by number in the system.
+''',
+                "https://leetcode.com/problems/design-a-number-container-system/",
+                "Medium",
+                ["Hash Maps", "Min Heap"],
+                [
+                    Example('''["NumberContainers", "find", "change", "change", "change", "change", "find", "change", "find"]
+[[], [10], [2, 10], [1, 10], [3, 10], [5, 10], [10], [1, 20], [10]]''', "[null, -1, null, null, null, null, 1, null, 2]"),
+                ],
+                [Constraint("1 <= index, number <= 10^9"), Constraint("At most 10^5 calls will be made in total to change and find")],
+                Solution(
+                    '''class NumberContainers:
+
+    def __init__(self):
+        self.numbersToIndex = {}       
+        self.indexToNumber = {}       
+
+
+    def change(self, index: int, number: int) -> None:
+        if index in self.indexToNumber and self.indexToNumber[index] == number:
+            return
+
+        if number in self.numbersToIndex:
+            heapq.heappush(self.numbersToIndex[number], index)
+        else:
+            self.numbersToIndex[number] = [index]
+        if index in self.indexToNumber:
+            oldNumber = self.indexToNumber[index]
+            self.numbersToIndex[oldNumber].remove(index)
+            if len(self.numbersToIndex[oldNumber]) == 0:
+                del self.numbersToIndex[oldNumber]
+            else:
+                heapq.heapify(self.numbersToIndex[oldNumber])
+        self.indexToNumber[index] = number
+        
+
+    def find(self, number: int) -> int:
+        if number not in self.numbersToIndex:
+            return -1
+        return  self.numbersToIndex[number][0]''',
+        "This solution is the typical double hash map solution to speed up querying. The only trick to this question is storing the indicies of the numbers in sorted order somehow. Leetcode suggests and ordered set, but I couldn't see one easily accessible in python so I used a min heap. The only slow part to this algorithm would be re-heapifying the indicies after removing one from the list. That is O(logn)",
+        "O(logn)",
+        "O(n)"
+                )
             )
-        ]
+        ],
         ),
     Topic("Sliding Windows"),
     Topic("Stacks"),
