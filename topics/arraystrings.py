@@ -186,6 +186,31 @@ You must write an algorithm that runs in O(n) time and without using the divisio
         "O(n)",
         "O(1)"
                 )
+            ),
+            Problem(
+                "53",
+                "Maximum Subarray",
+                "Given an integer array nums, find the subarray with the largest sum, and return its sum.",
+                "https://leetcode.com/problems/maximum-subarray/",
+                "Medium",
+                ["Arrays", "Dynamic Programming"],
+                [Example("nums = [-2,1,-3,4,-1,2,1,-5,4]", 6), Example("nums = [1]", "1"), Example("nums = [5,4,-1,7,8]", "23")],
+                [Constraint("1 <= nums.length <= 10^5"), Constraint("-10^4 <= nums[i] <= 10^4")],
+                Solution(
+                    '''class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        res, curr = float("-inf"), 0
+
+        for num in nums:
+            curr += num
+            curr = max(curr, num)
+            res = max(curr, res)
+        return res''',
+                    "If you brute force this problem you would be required to do O(n^2) operations. This is very slow for this problem. By using Kadane's algorithm we can go down to O(n). This is where as we move from left to right through the array, if we find a new starting point that is higher than the current total we are seeing with the subarray then we restart the subarray at that point. This is very similar to the Best Time to Buy and Sell a Stock question. If we find a better entry point to the stock market then we just start there.",
+                    "O(n)",
+                    "O(1)"
+                )
+
             )
                     ]
     )

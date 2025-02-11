@@ -40,6 +40,7 @@ My goal in completing this set of questions is to force myself to finish a set o
 | [Best Time to Buy and Sell a Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-a-stock/) | <img src="https://img.shields.io/badge/-Easy-green" />    | `Arrays`, `Dynamic Programming`, `Sliding Window` | [✅](./002%20-%20Two%20Pointers/001%20-%20Best%20Time%20to%20Buy%20and%20Sell%20a%20Stock/README.md) |
 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                               | <img src="https://img.shields.io/badge/-Easy-green" />    | `Arrays`, `Hash Table`                            | [✅](./003%20-%20Hash%20Maps/004%20-%20Contains%20Duplicate/README.md)                               |
 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)           | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Arrays`, `Hash Table`                            | [✅](./001%20-%20Arrays%20and%20Strings/004%20-%20Product%20of%20Array%20Except%20Self/README.md)    |
+| [Maximum Subarray](https://leetcode.com/problems/maximum-subarry/)                                    | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Arrays`, `Dynamic Programming`                   | [✅](./001%20-%20Arrays%20and%20Strings/005%20-%20Maximum%20Subarray/README.md)                      |
 
 ## Repository Structure
 
