@@ -4,6 +4,7 @@ from sdk.models.problems import Constraint, Example, Problem, Solution
 from sdk.models.topic import SubTopic, Topic
 from sdk.utils.filecrud import init
 from sdk.utils.topics import handleTopic
+from topics.stacks import stacks
 from topics.arraystrings import arraystrings
 from topics.hashmaps import hashmaps
 from topics.twopointers import twopointers
@@ -13,7 +14,7 @@ topics: List[Topic] = [
     twopointers,
 hashmaps,
     Topic("Sliding Windows"),
-    Topic("Stacks"),
+   stacks,
     Topic("Linked Lists"),
     Topic("Trees"),
     Topic("Matricies"),
