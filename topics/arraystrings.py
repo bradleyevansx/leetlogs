@@ -211,6 +211,84 @@ You must write an algorithm that runs in O(n) time and without using the divisio
                     "O(1)"
                 )
 
+            ),
+            Problem(
+                "15",
+                "Three Sum",
+                '''Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+
+Notice that the solution set must not contain duplicate triplets.''',
+                "https://leetcode.com/problems/3sum/",
+                "Medium",
+                ["Array", "Two Pointers", "Sorting"],
+                [Example("nums = [-1,0,1,2,-1,-4]", "[[-1,-1,2],[-1,0,1]]"), Example("nums = [0,1,1]", "[]"), Example("nums = [0, 0, 0]", "[[0, 0, 0]]")],
+                [Constraint("0 <= nums.length <= 3000"), Constraint("-10^5 <= nums[i] <= 10^5")],
+                Solution(
+                    '''class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        res = set()
+        n = len(nums)
+        nums.sort()
+
+        for i in range(n):
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue
+                
+            seen = set()
+            curr1 = nums[i]
+            target = 0 - curr1
+            for j in range(i + 1, n):
+                curr2 = nums[j]
+                if target - curr2 in seen:
+                    res.add(tuple([curr1, target - curr2, curr2]))
+                seen.add(curr2)
+        return [[i[0], i[1], i[2]] for i in res]
+''',
+                    "My solution is slower than average but I feel it is an acceptable solution. It takes a triple nested for loop and makes it only double. So O(n^3) to O(n^2). This is a major improvement. The process for this is to loop through the array checking for a two sum in the rest of the array that adds up to zero with the number that is already fixed. Keeping track of the solutions is a set allows for easy tracking of solutions.",
+                    "O(n^2)",
+                    "O(n)"
+                )
+
+            ),
+            Problem(
+                "56", 
+                "Merge Intervals",
+                '''Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.''',
+                "https://leetcode.com/problems/merge-intervals/",
+                "Medium",
+                ["Array", "Sorting"],
+                [Example("intervals = [[1,3],[2,6],[8,10],[15,18],[17,20]]", "[[1,6],[8,10],[15,20]]")],
+                [Constraint("1 <= intervals.length <= 10^4"), Constraint("intervals[i].length == 2"), Constraint("0 <= starti <= endi <= 10^4")],
+                Solution(
+                    '''class Solution:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
+        heap = []
+        n = len(intervals)
+        hm = {}
+
+        for start, end in intervals:
+            if start in hm:
+                hm[start] = max(end, hm[start])
+            else:
+                hm[start] = end
+        
+        for key in hm:
+            value = [key, hm[key]]
+            heapq.heappush(heap, value)
+
+        res = []
+
+        while heap:
+            start, end = heapq.heappop(heap)
+            while heap and heap[0][0] <= end:
+                start2, end2 = heapq.heappop(heap)
+                end = max(end2, end)
+            res.append([start, end])
+        return res''',
+                    "This solution is based on the fact that this problem is actually very simple at the face value but requires some pre processing to catch some edge cases. For example, the intervals are not guaranteed to be sorted so to make it easier to process when it's sorted already. The other bit of processing I do it removing any duplicated start points. This allows me to not have to worry about when the start points are the same and just take the one that is the longest to include the most amount overlapped intervals.",
+                    "O(n log n)",
+                    "O(n)"
+                )
             )
                     ]
     )
