@@ -4,6 +4,7 @@ from sdk.models.problems import Constraint, Example, Problem, Solution
 from sdk.models.topic import SubTopic, Topic
 from sdk.utils.filecrud import init
 from sdk.utils.topics import handleTopic
+from topics.linkedlists import linkedlists
 from topics.heaps import heaps
 from topics.stacks import stacks
 from topics.arraystrings import arraystrings
@@ -17,7 +18,7 @@ hashmaps,
 heaps,
     Topic("Sliding Windows"),
    stacks,
-    Topic("Linked Lists"),
+   linkedlists,
     Topic("Trees"),
     Topic("Matricies"),
     Topic("Intervals"),

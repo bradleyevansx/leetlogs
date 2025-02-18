@@ -45,6 +45,8 @@ My goal in completing this set of questions is to force myself to finish a set o
 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/)                                     | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Arrays`, `Sorting`                               | [✅](./001%20-%20Arrays%20and%20Strings/007%20-%20Merge%20Intervals/README.md)                       |
 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)                                       | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Arrays`, `Sorting`, `Group Anagrams`             | [✅](./001%20-%20Arrays%20and%20Strings/008%20-%20Group%20Anagrams/README.md)                        |
 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)       | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Arrays`, `Binary Search`                         | [✅](./001%20-%20Arrays%20and%20Strings/009%20-%20Search%20in%20Rotated%20Sorted%20Array/README.md)  |
+| [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                             | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Linked List`                                     | [✅](./007%20-%20Linked%20Lists/001%20-%20Reverse%20Linked%20List/README.md)                         |
+| [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)                                 | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Linked List`, `Two Pointer`, `Cycle Detection`   | [✅](./007%20-%20Linked%20Lists/002%20-%20Linked%20List%20Cycle/README.md)                           |
 
 ## Repository Structure
 
