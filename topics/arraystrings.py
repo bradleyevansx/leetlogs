@@ -289,6 +289,92 @@ Notice that the solution set must not contain duplicate triplets.''',
                     "O(n log n)",
                     "O(n)"
                 )
+            ),
+            Problem(
+                "49",
+                "Group Anagrams",
+                "Given an array of strings strs, group the anagrams together. You can return the answer in any order.",
+                "https://leetcode.com/problems/group-anagrams/",
+                "Medium",
+                ["Array", "Hash Table", "Sorting"],
+                [Example("strs = [eat,sleep,tea,ate]", "[[eat, tea, ate], [sleep]]")],
+                [Constraint("1 <= strs.length <= 1000"), Constraint("1 <= strs[i].length <= 100"), Constraint("strs[i] consists of lowercase English letters.")],
+                Solution(
+                    '''class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        hm = {}
+
+        for i, s in enumerate(strs):
+            key = tuple(sorted(s))
+            if key in hm:
+                hm[key].append(i)
+            else:
+                hm[key] = [i]
+        
+        res = []
+
+        for key in hm:
+            indexes = hm[key]
+            res.append([strs[i] for i in indexes])
+            
+        return res''',
+                    "This solution is really about efficiently storing the anagrams in a structure that can group them together. In addition to this you need an efficient way of telling which group the words belong to. To do this I sorted them and then hash that value into the hash map. This means that the only expensive operation here is sorting each value in nums. Then from there appending to the group is all O(1). This means that the over all complexity is n * nlogn for the sorting n times. This is alright for this question because the maximum length of the words is 100. So the sorting is not that expensive. The space complexity is O(n) because we are storing all the words in the hashmap.",
+                    "O(n * klogk)",
+                    "O(n)"
+                )
+
+            ),
+            Problem(
+                "33",
+                "Search in Rotated Sorted Array",
+                '''There is an integer array nums sorted in ascending order (with distinct values).
+
+Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 <= k < nums.length) such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
+
+Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
+
+You must write an algorithm with O(log n) runtime complexity.''',
+                "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+                "Medium",
+                ["Array", "Binary Search"],
+                [Example("nums = [4,5,6,7,0,1,2], target = 0", "4"), Example("nums = [1], target = 0", "-1")],
+                [Constraint("n == nums.length"), Constraint("1 <= n <= 5000"), Constraint("-10^4 <= nums[i] <= 10^4"), Constraint("All values of nums are unique."), Constraint("nums is an ascending array that is possibly rotated."), Constraint("-10^4 <= target <= 10^4")],
+                Solution(
+                    '''class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        n = len(nums)
+        l, r = 0, n - 1
+        rightMost = nums[n - 1]
+        mid = None
+        while l < r:
+            mid = (l + r) // 2
+            if nums[mid] > rightMost:
+                l = l + 1
+            elif nums[mid] < rightMost:
+                r = r - 1
+
+        if mid == None:
+            return 0 if nums[0] == target else -1
+        
+        if target >= nums[0] and target <= nums[mid]:
+            l, r = 0, mid
+        else:
+            l, r = mid + 1, n - 1
+
+        while l <= r:
+            mid = (l + r) // 2
+            if nums[mid] < target:
+                l = mid + 1
+            elif nums[mid] > target:
+                r = mid - 1
+            else:
+                return mid
+        return -1''',
+                    "This problem was pretty tricky for me. I need to get better at binary search problems. This problem all comes down to speeding up the search by knowing first which side of the array from the pivot to search in. This means first finding the pivot and then binary searching to the left or right of the pivot. Luckily we an binary search for the pivot as well. This means that the solution is logn instead of n + logn which would be O(n).",
+                    "O(log n)",
+                    "O(1)"
+                )
+
             )
                     ]
     )
