@@ -26,7 +26,7 @@ Show some ❤️ by starring ⭐ this repository if you like it!
 
 ## Current Problem Set
 
-### Blind 75 ![](https://img.shields.io/badge/Progress-5%2F75-0078D4)
+### Blind 75 ![](https://img.shields.io/badge/Progress-11%2F75-0078D4)
 
 The Blind 75 is a list of questions curated by an ex-meta engineer.
 
