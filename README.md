@@ -26,7 +26,7 @@ Show some ❤️ by starring ⭐ this repository if you like it!
 
 ## Current Problem Set
 
-### Blind 75 ![](https://img.shields.io/badge/Progress-13%2F75-0078D4)
+### Blind 75 ![](https://img.shields.io/badge/Progress-14%2F75-0078D4)
 
 The Blind 75 is a list of questions curated by an ex-meta engineer.
 
@@ -49,6 +49,7 @@ My goal in completing this set of questions is to force myself to finish a set o
 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)                                       | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Linked List`, `Two Pointer`, `Cycle Detection`   | [✅](./007%20-%20Linked%20Lists/002%20-%20Linked%20List%20Cycle/README.md)                           |
 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)                       | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Arrays`, `Two Pointer`, `Greedy`                 | [✅](./002%20-%20Two%20Pointers/002%20-%20Container%20With%20Most%20Water/README.md)                 |
 | [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | <img src="https://img.shields.io/badge/-Medium-orange" /> | `Arrays`, `Two Pointer`, `Binary Search`          | [✅](./002%20-%20Two%20Pointers/003%20-%20Find%20Minimum%20in%20Rotated%20Sorted%20Array/README.md)  |
+| [Find Median From Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)                 | <img src="https://img.shields.io/badge/-Hard-red" />      | `Simulation`, `Min Heap`, `Max Heap`              | [✅](./004%20-%20Heaps/002%20-%20Find%20Median%20from%20Data%20Stream/README.md)                     |
 
 ## Repository Structure
 
