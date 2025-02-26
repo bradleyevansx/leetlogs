@@ -10,6 +10,7 @@ from topics.stacks import stacks
 from topics.arraystrings import arraystrings
 from topics.hashmaps import hashmaps
 from topics.twopointers import twopointers
+from topics.dp import dp
 
 topics: List[Topic] = [
     arraystrings,
@@ -22,7 +23,7 @@ heaps,
     Topic("Trees"),
     Topic("Matricies"),
     Topic("Intervals"),
-    Topic("Dynamic Programming"),
+    dp
 ]
 
 def main():
